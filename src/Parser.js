@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const { JSDOM } = require("jsdom");
 const Major = require("./Major")
+
 const config = {
     baseUrl: "http://www.issatso.rnu.tn/fo/emplois/emploi_groupe.php"
 }

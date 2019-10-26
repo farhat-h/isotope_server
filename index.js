@@ -11,25 +11,35 @@ const config = {
 const p = new Parser();
 
 p.initialize()
-    .then(async function (majors) {
+    .then(crawlSchedules);
+
+
+async function crawlSchedules(majors = []) {
+    const allSessions = [];
+
+    for (let i = 0; i < majors.length; i++) {
         try {
             const body = new formData();
             body.append("jeton", p.token);
-            body.append("id", majors[0].id)
+            body.append("id", majors[i].id)
 
             const params = {
                 method: "POST",
                 headers: new fetch.Headers([["Cookie", p.cookie]]),
                 body
             }
-
+            console.log("Fetching "+majors[i].fullName);
+            
             const html = await fetch(config.baseUrl, params)
                 .then(res => res.text());
 
             const { document: doc } = new JSDOM(html).window;
-            const s = new Schedule(doc, majors[0]).getSessions();
+            const partialSessions = new Schedule(doc, majors[i]).getSessions();
+            allSessions.push(...partialSessions);
         } catch (error) {
             console.error(error);
 
         }
-    }) 
+    }
+
+}

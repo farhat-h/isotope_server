@@ -2,7 +2,6 @@ class Major {
     static regex = /^(.*?)-?(A\d)-(.*)$/;
 
     constructor(item = HTMLOptionElement) {
-
         this.id = item.value;
         this.fullName = item.textContent;
         let parts = Major.regex.exec(this.fullName);
@@ -17,6 +16,13 @@ class Major {
             this.group = parts[3];
         }
 
+    }
+    serialized() {
+        return {
+            majorId: this.id,
+            year: this.year,
+            group: this.group
+        }
     }
 }
 

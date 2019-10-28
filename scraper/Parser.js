@@ -30,8 +30,7 @@ class Parser {
             this.databaseName = /:\s(.*)$/.exec(this.document.querySelector(".content.container center h5").textContent)[1].trim() + ".sqlite";
             const lastDbVersion = getCurrentDatabaseVersion();
             console.log(`found value: ${this.databaseName}, old value: ${lastDbVersion}\n`);
-            if (this.databaseName === lastDbVersion) {
-                // no need  to do anything
+            if (this.databaseName === lastDbVersion) { // Sheee homie we out
                 process.exit(0);
             }
             this.database = new Database(this.databaseName);

@@ -22,7 +22,9 @@ app.get("/sessions", async (req, res) => {
     const sesh = await database.Session.findAll();
     res.send(sesh)
 });
-app.get("/getDb");
+app.get("/getDb", (req, res) => {
+
+});
 app.listen(3000, () => {
     console.log(`isotop server running on port: ${PORT}`);
 });

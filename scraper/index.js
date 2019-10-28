@@ -3,7 +3,7 @@ const Parser = require("./Parser");
 const formData = require("form-data");
 const {JSDOM} = require("jsdom");
 const Schedule = require("./Schedule");
-
+const {setDbVersion} = require("../dbs");
 const config = {
     baseUrl: "http://www.issatso.rnu.tn/fo/emplois/emploi_groupe.php"
 }
@@ -46,4 +46,5 @@ async function crawlSchedules(majors = []) {
 }
 
 p.initialize()
-    .then(crawlSchedules);
+    .then(crawlSchedules)
+    .then(() => setDbVersion(p.databaseName));

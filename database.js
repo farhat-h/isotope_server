@@ -1,7 +1,6 @@
 const Sequelize = require("sequelize");
 const path = require("path");
 const pathToDbs = path.resolve(__dirname, "dbs/");
-const {setDbVersion} = require("./dbs");
 
 class Database {
     constructor(databaseName = "db.sqlite") {
@@ -16,8 +15,6 @@ class Database {
                 timestamps: false
             }
         });
-
-        setDbVersion(this.databaseName);
 
 
         this.Major = class Major extends Sequelize.Model {

@@ -1,14 +1,15 @@
 const fetch = require("node-fetch");
 const Parser = require("./Parser");
 const formData = require("form-data");
-const { JSDOM } = require("jsdom");
+const {JSDOM} = require("jsdom");
 const Schedule = require("./Schedule");
-
-const { Major, Session } = require("./database");
 
 const config = {
     baseUrl: "http://www.issatso.rnu.tn/fo/emplois/emploi_groupe.php"
 }
+
+
+const p = new Parser();
 
 
 async function crawlSchedules(majors = []) {
@@ -27,12 +28,12 @@ async function crawlSchedules(majors = []) {
             const html = await fetch(config.baseUrl, params)
                 .then(res => res.text());
 
-            const { document: doc } = new JSDOM(html).window;
+            const {document: doc} = new JSDOM(html).window;
             const partialSessions = new Schedule(doc, majors[i]).getSessions();
 
-            await Major.create(majors[i].serialized());
-            await Session.bulkCreate(partialSessions);
-            
+            await p.database.Major.create(majors[i].serialized());
+            await p.database.Session.bulkCreate(partialSessions);
+
             console.log(majors[i].fullName + " DOWNLOADED!");
         } catch (error) {
             console.error(error);
@@ -43,9 +44,6 @@ async function crawlSchedules(majors = []) {
     return true
 
 }
-
-
-const p = new Parser();
 
 p.initialize()
     .then(crawlSchedules);

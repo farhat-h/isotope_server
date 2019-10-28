@@ -17,6 +17,7 @@ class Major {
         }
 
     }
+
     serialized() {
         return {
             majorId: this.id,

@@ -41,7 +41,7 @@ class Schedule {
         const room = sesh.children[7].textContent;
         const regime = sesh.children[8].textContent;
 
-        data.push(new Session({ time, subject, professor, type, room, regime, majorId: this.major.id, subGroup }))
+        data.push(new Session({ day, time, subject, professor, type, room, regime, majorId: this.major.id, subGroup }).serialized())
       }
     }
     return data;

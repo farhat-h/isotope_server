@@ -21,7 +21,9 @@ class Major {
         return {
             majorId: this.id,
             year: this.year,
-            group: this.group
+            group: this.group,
+            fullName: this.fullName,
+            majorName: this.majorName
         }
     }
 }

@@ -1,7 +1,9 @@
 const Session = require("./Session");
+const r_subgroup = /(\d)$/;
+const r_day = /^(\d)-(Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi)$/;
+
 class Schedule {
-  static r_subgroup = /(\d)$/;
-  static r_day = /^(\d)-(Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi)$/;
+
   constructor(document, major) {
     this.document = document;
     this.major = major;
@@ -22,12 +24,12 @@ class Schedule {
 
       if (firstCell.textContent !== "" && firstCell.textContent.includes(this.major.fullName)) {
 
-        const [_, subg] = Schedule.r_subgroup.exec(firstCell.textContent);
+        const [_, subg] = r_subgroup.exec(firstCell.textContent);
         subGroup = subg;
 
-      } else if (Schedule.r_day.test(firstCell.textContent)) {
+      } else if (r_day.test(firstCell.textContent)) {
 
-        const [_, d] = Schedule.r_day.exec(firstCell.textContent);
+        const [_, d] = r_day.exec(firstCell.textContent);
         day = d;
 
       } else if (sesh.textContent === "") {

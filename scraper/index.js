@@ -9,12 +9,7 @@ const { getCurrentDatabaseVersion, setDbVersion } = require("../dbs");
 
 const URL = "http://www.issatso.rnu.tn/fo/emplois/emploi_groupe.php";
 class Crawler extends EventEmitter {
-    static instance = null;
-    static getInstance() {
-        if (this.instance === null)
-            Crawler.instance = new Crawler();
-        return Crawler.instance;
-    }
+
     constructor() {
         super();
         this.document = null;
@@ -146,4 +141,4 @@ class Crawler extends EventEmitter {
 }
 
 
-Crawler.getInstance();
+new Crawler();

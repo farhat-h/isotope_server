@@ -1,4 +1,4 @@
-const {accessSync, readFileSync, writeFileSync} = require("fs");
+const {accessSync, readFileSync, writeFileSync, renameSync} = require("fs");
 const path = require("path");
 
 const pathToJson = path.resolve(__dirname, "current.json");
@@ -15,6 +15,8 @@ function getCurrentDatabaseVersion() {
     let dbVersion = JSON.parse(readFileSync(pathToJson, {encoding: "utf8"}));
     return dbVersion.current;
 }
+
+
 
 function setDbVersion(nextVersion = "") {
     const dbVersion = getCurrentDatabaseVersion();

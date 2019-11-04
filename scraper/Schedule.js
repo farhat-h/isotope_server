@@ -1,7 +1,6 @@
 const Session = require("./Session");
 const r_subgroup = /(\d)$/;
 const r_day = /^(\d)-(Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi)$/;
-
 class Schedule {
 
   constructor(document, major) {
@@ -11,10 +10,10 @@ class Schedule {
   getSessions() {
     const data = [];
     const isScheduleEmpty =
-      this.document.querySelector("#dvContainer tbody").innerHTML === "";
-    if (isScheduleEmpty)
-      throw new Error(`Schedule for ${major.fullName} is empty`);
-
+      this.document.querySelector("#dvContainer tbody") === null;
+    if (isScheduleEmpty) {
+      throw new Error("no-schedule-error")
+    }
     let sessions = Array.from(this.document.querySelectorAll("#dvContainer tbody tr"));
     let subGroup = 1;
     let day = 1;

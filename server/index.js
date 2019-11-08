@@ -79,8 +79,9 @@ app.get("/api/sessions/:majorId", async (req, res) => {
 
 app.get("/api/getLastDatabaseVersion", (req, res) => {
   const db = getCurrentDatabaseVersion();
-  console.log(db);
-  fs.createReadStream(path.resolve(__dirname, "..", "dbs/", db)).pipe(res);
+  const pathToDatabase = path.resolve(__dirname, "..", "dbs/", db);
+
+  res.download(pathToDatabase, db);
 });
 
 app.get("*", (req, res) => {

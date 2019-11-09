@@ -25,14 +25,14 @@ class Database {
     this.Major.init(
       {
         majorId: {
-          type: Sequelize.STRING,
+          type: Sequelize.TEXT,
           primaryKey: true,
           allowNull: false
         },
-        year: Sequelize.NUMBER,
-        group: Sequelize.STRING,
-        fullName: Sequelize.STRING,
-        majorName: Sequelize.STRING
+        year: Sequelize.TEXT,
+        group: Sequelize.TEXT,
+        fullName: Sequelize.TEXT,
+        majorName: Sequelize.TEXT
       },
       {
         sequelize: this.sequelize
@@ -42,19 +42,18 @@ class Database {
     this.Session.init(
       {
         sessionId: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.TEXT,
           primaryKey: true,
-          allowNull: false,
-          autoIncrement: true
+          allowNull: false
         },
-        day: Sequelize.NUMBER,
-        time: Sequelize.STRING,
-        subject: Sequelize.STRING,
-        professor: Sequelize.STRING,
-        type: Sequelize.STRING,
-        room: Sequelize.STRING,
-        regime: Sequelize.STRING,
-        subGroup: Sequelize.NUMBER
+        day: { type: Sequelize.INTEGER, allowNull: false },
+        time: Sequelize.TEXT,
+        subject: Sequelize.TEXT,
+        professor: Sequelize.TEXT,
+        type: Sequelize.TEXT,
+        room: Sequelize.TEXT,
+        regime: Sequelize.TEXT,
+        subGroup: { type: Sequelize.INTEGER, allowNull: false }
       },
       { sequelize: this.sequelize }
     );

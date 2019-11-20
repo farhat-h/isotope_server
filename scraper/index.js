@@ -68,7 +68,11 @@ class Crawler extends EventEmitter {
         break;
       case "sessions":
         try {
-          await this.database.Session.bulkCreate(data);
+          await this.database.Session.bulkCreate(
+            data.filter(
+              s => s.time !== "" && s.subject !== "" && s.professor !== ""
+            )
+          );
         } catch (error) {
           console.error(error);
           process.exit(1);

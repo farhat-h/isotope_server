@@ -22,6 +22,8 @@ class Database {
 
     this.Session = class Session extends Sequelize.Model {};
 
+    this.Regime = class regime extends Sequelize.Model {};
+
     this.Major.init(
       {
         majorId: {
@@ -57,8 +59,21 @@ class Database {
       },
       { sequelize: this.sequelize }
     );
-
     this.Major.hasMany(this.Session, { foreignKey: "majorId" });
+
+    this.Regime.init(
+      {
+        regimeQAB: Sequelize.TEXT,
+        regimeZ: Sequelize.TEXT,
+        regimeM: Sequelize.TEXT,
+        month: Sequelize.INTEGER,
+        startDay: Sequelize.INTEGER,
+        endDay: Sequelize.INTEGER
+      },
+      {
+        sequelize: this.sequelize
+      }
+    );
   }
 
   initialize() {

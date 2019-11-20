@@ -1,0 +1,292 @@
+[
+  {
+    "startMonth": 9,
+    "endMonth": 9,
+    "startDay": 23,
+    "endDay": 28,
+    "regimeZ": "null",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 9,
+    "endMonth": 10,
+    "startDay": 30,
+    "endDay": 5,
+    "regimeZ": "null",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 10,
+    "endMonth": 10,
+    "startDay": 7,
+    "endDay": 12,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 10,
+    "endMonth": 10,
+    "startDay": 14,
+    "endDay": 19,
+    "regimeZ": "Z2",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 10,
+    "endMonth": 10,
+    "startDay": 21,
+    "endDay": 26,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 10,
+    "endMonth": 11,
+    "startDay": 28,
+    "endDay": 2,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 11,
+    "endMonth": 11,
+    "startDay": 4,
+    "endDay": 9,
+    "regimeZ": "Z1/Z4",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 11,
+    "endMonth": 11,
+    "startDay": 11,
+    "endDay": 16,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 11,
+    "endMonth": 11,
+    "startDay": 18,
+    "endDay": 23,
+    "regimeZ": "Z1/Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 11,
+    "endMonth": 11,
+    "startDay": 25,
+    "endDay": 30,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 12,
+    "endMonth": 12,
+    "startDay": 2,
+    "endDay": 7,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 12,
+    "endMonth": 12,
+    "startDay": 9,
+    "endDay": 14,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 12,
+    "endMonth": 1,
+    "startDay": 15,
+    "endDay": 2,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 1,
+    "endMonth": 1,
+    "startDay": 2,
+    "endDay": 4,
+    "regimeZ": "Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+
+  {
+    "startMonth": 1,
+    "endMonth": 1,
+    "startDay": 6,
+    "endDay": 11,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 1,
+    "endMonth": 1,
+    "startDay": 13,
+    "endDay": 15,
+    "regimeZ": "Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 2,
+    "endMonth": 2,
+    "startDay": 3,
+    "endDay": 8,
+    "regimeZ": "null",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 2,
+    "endMonth": 2,
+    "startDay": 10,
+    "endDay": 15,
+    "regimeZ": "null",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 2,
+    "endMonth": 2,
+    "startDay": 17,
+    "endDay": 22,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 2,
+    "endMonth": 2,
+    "startDay": 24,
+    "endDay": 29,
+    "regimeZ": "Z2",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+
+  {
+    "startMonth": 3,
+    "endMonth": 3,
+    "startDay": 2,
+    "endDay": 7,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 3,
+    "endMonth": 3,
+    "startDay": 9,
+    "endDay": 14,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M1",
+    "regimeQAB": "B"
+  },
+
+  {
+    "startMonth": 3,
+    "endMonth": 3,
+    "startDay": 16,
+    "endDay": 29,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 3,
+    "endMonth": 4,
+    "startDay": 30,
+    "endDay": 4,
+    "regimeZ": "Z1",
+    "regimeM": "M1",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 4,
+    "endMonth": 4,
+    "startDay": 6,
+    "endDay": 11,
+    "regimeZ": "Z1/Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 4,
+    "endMonth": 4,
+    "startDay": 13,
+    "endDay": 18,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+
+  {
+    "startMonth": 4,
+    "endMonth": 4,
+    "startDay": 20,
+    "endDay": 25,
+    "regimeZ": "Z1/Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+
+  {
+    "startMonth": 4,
+    "endMonth": 5,
+    "startDay": 27,
+    "endDay": 2,
+    "regimeZ": "Z2/Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+
+  {
+    "startMonth": 5,
+    "endMonth": 5,
+    "startDay": 4,
+    "endDay": 9,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  },
+  {
+    "startMonth": 5,
+    "endMonth": 5,
+    "startDay": 11,
+    "endDay": 16,
+    "regimeZ": "Z3",
+    "regimeM": "M2",
+    "regimeQAB": "B"
+  },
+  {
+    "startMonth": 5,
+    "endMonth": 5,
+    "startDay": 18,
+    "endDay": 23,
+    "regimeZ": "Z4",
+    "regimeM": "M2",
+    "regimeQAB": "A"
+  }
+]

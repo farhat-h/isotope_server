@@ -5,7 +5,7 @@ const Schedule = require("./Schedule");
 const { JSDOM } = require("jsdom");
 const Database = require("../database");
 const { getCurrentDatabaseVersion, setDbVersion } = require("../dbs");
-
+const regimeData = require("./regimedata.json");
 const URL = "http://www.issatso.rnu.tn/fo/emplois/emploi_groupe.php";
 class Crawler extends EventEmitter {
   constructor() {
@@ -74,18 +74,25 @@ class Crawler extends EventEmitter {
           process.exit(1);
         }
         break;
-      default:
+      case "regime":
+        try {
+          await this.database.Regime.bulkCreate(data);
+        } catch (error) {
+          console.error(error);
+          process.exit(1);
+        }
         break;
     }
   }
 
   async _parse() {
+    this.emit("insert-data", regimeData, "regime");
+
     this.majors = Array.from(
       this.document.querySelectorAll("select[name=id] option")
     ).map(item => new Major(item));
 
     this.emit("insert-data", this.majors, "majors");
-
     await Promise.all(this.majors.map(m => this._parseMajorSchedule(m)));
     this.emit("start-retry-queue");
   }

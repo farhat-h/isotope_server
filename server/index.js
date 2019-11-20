@@ -6,7 +6,6 @@ const { getCurrentDatabaseVersion } = require("../dbs");
 const Database = require("../database");
 let database = new Database(getCurrentDatabaseVersion());
 const bodyParser = require("body-parser");
-const fs = require("fs");
 
 const cors = require("cors");
 
@@ -81,7 +80,7 @@ app.get("/api/getLastDatabaseVersion", (req, res) => {
   const db = getCurrentDatabaseVersion();
   const pathToDatabase = path.resolve(__dirname, "..", "dbs/", db);
 
-  res.download(pathToDatabase, db);
+  res.download(pathToDatabase, "database.sqlite");
 });
 
 app.get("*", (req, res) => {

@@ -66,7 +66,8 @@ class Database {
         regimeQAB: Sequelize.TEXT,
         regimeZ: Sequelize.TEXT,
         regimeM: Sequelize.TEXT,
-        month: Sequelize.INTEGER,
+        startMonth: Sequelize.INTEGER,
+        endMonth: Sequelize.INTEGER,
         startDay: Sequelize.INTEGER,
         endDay: Sequelize.INTEGER
       },
